@@ -1,0 +1,60 @@
+/*
+*@Name: 游戏商城
+*@Author: shuai
+*@Copyright:layui.com
+*/
+
+
+body{font-family: "Microsoft YaHei", "SimSun", '\5b8b\4f53', sans-serif;  -moz-user-select:none;
+      -webkit-user-select: none;       
+      -ms-user-select: none;     }
+.w1200{width: 1200px; margin:0 auto;}
+.nobor{border-bottom: 0!important;}
+.margin0{margin: 0!important;}
+.padding0{padding: 0!important;}
+i{font-style: normal;}
+
+/*site-nav*/
+.site-nav-bg{height: 30px; line-height: 30px; background-color: #f5f5f5;}
+.site-nav{position: relative;}
+.sn-back-home{float: left;}
+.sn-back-home i{margin:0 4px 0 8px; font-size: 14px;}
+.sn-quick-menu{position: absolute; right: 12px;}
+.sn-quick-menu div{float: left;}
+.sn-quick-menu div.login{margin-right: 22px; }
+.sn-quick-menu div.login a{color: #ff5500;}
+.sn-quick-menu div.sp-cart span{margin-left:4px; color: #ff5500; font-weight: bold;}
+/*end-site-nav*/
+
+.content-nav-base .main-nav{border-bottom:1px solid #cfb1f7;}
+.content-nav-base .main-nav .inner-cont2{padding-left: 40px;}
+.content-nav-base .main-nav .inner-cont2 a{padding:0; margin-right: 75px;}
+
+
+/*login*/
+.login-content/* .login-bg */{height: 100%;width: 100%;}
+.login-content.video{
+	position: relative;  
+	right: 0px;  
+	bottom: 0px;  
+	min-width: 100%;  
+	min-height: 100%;  
+	height: auto;  
+	width: auto;  
+}
+.login-content.video.source{  
+    min-width: 100%;  
+    min-height: 100%;  
+    height: auto;  
+    width: auto;  
+        } 
+.login-content .login-cont{ /* height: 990px; */ position: relative;}
+.login-content .login-cont .form-box{width: 300px; height: 390px; border:2px solid #d9dadc;border-radius: 25px;box-shadow:1px 1px 1px #00F7DE; background: #fff; position: absolute; top: 130px; right: 160px; padding:0 30px;}
+.login-content .login-cont .form-box legend{font-size: 20px; color: #323232; text-align: center; padding:50px 0;}
+.login-content .login-cont .layui-inline,.login-content .login-cont .layui-input-inline{width: 100%; position: relative;}
+.login-content .login-cont .iphone{margin-bottom: 20px;}
+.login-content .login-cont .veri-code .layui-btn{width: 102px; background: #eeeeee; text-align: center; color: #333; height: 36px; line-height: 36px; display: inline-block; border:none; cursor: pointer; position: absolute; top: 1px; right: 1px; font-size: 12px; padding:0 14px;}
+.login-content .login-cont .login-btn .layui-input-block{margin-left: 0; padding-top: 25px;}
+.login-content  .login-cont .login-btn .layui-input-block button{width: 100%; background: #cfb2f6; font-size: 18px;}
+/*end-login*/
+

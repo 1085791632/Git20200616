@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>游戏商城</title>
+  <script src="../res/layui/lay/modules/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="../res/static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
+  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+  <div class="site-nav-bg">
+    <div class="site-nav w1200">
+      <p class="sn-back-home">
+        <i class="layui-icon layui-icon-home"></i>
+        <a href="#">首页</a>
+      </p>
+      <div class="sn-quick-menu">
+        <div class="login"><a href="login.html">登录</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content login-content">
+      <div class="login-cont w1290">
+		  <video class="login-bg" autoplay loop muted width=100% height=100%>
+		  	<source src="https://mdup.apdcdn.tc.qq.com/vcloud1022.tc.qq.com/1022_edee3d0b35a64e479ce9a6b45f05a745.f0.mp4?vkey=3E03D9200A6DA71ECEF4491D04DD3A161F79E196DD889D76327201FD5642CFF6ABE0344B0C898144DC3396BB3A3B74A174FB90CBE0F192A80C46F2BB4A6FC7EBF63A1501976F40430D87E89C24B59F89C6EB0F858370274B&amp;sha=0" type="video/mp4">
+		  </video>
+        <div class="form-box">
+          <form class="layui-form" action="">
+            <legend>用户登录</legend>
+            <div class="layui-form-item">
+              <div class="layui-inline iphone">
+                <div class="layui-input-inline">
+                  <input type="tel" name="phone" id="phone" lay-verify="required|phone" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-inline veri-code">
+                <div class="layui-input-inline">
+                  <input id="password" type="text" name="password" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item login-btn">
+              <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1" onclick="return false">登录</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+   layui.config({
+      base: '../res/static/js/util' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use(['jquery','form'],function(){
+          var $ = layui.$,form = layui.form;
+
+
+        $("#find").click(function() {
+            if(!/^1\d{10}$/.test($("#phone").val())){
+              layer.msg("请输入正确的手机号");
+              return false;
+            }
+			$post(
+				//请求路径
+				// http:"//localhost:8080/shop/user/login",
+					//请求参数
+					{
+						phone:15000000000,
+						password:123
+					},
+					//成功回调函数
+					// function(){
+					// 	alert("登录成功！");
+					// }
+					"json"
+			)
+            //var obj=this;
+            $.ajax({
+                type:"get",
+                url:"../json/login.json",
+                dataType:"json",//返回的
+                success:function(data) {
+                    
+                    if(data.result){
+                        $("#find").addClass(" layui-btn-disabled");
+                        $('#find').attr('disabled',"true");
+                        //settime(obj);
+                        $("#msg").text(data.msg);
+                    }else{
+                        layer.msg(data.msg);
+                    }
+                },
+                error:function(msg) {
+                    console.log(msg);
+                }
+            }); 
+        })
+       
+    })
+  </script>
+</body>
+</html>

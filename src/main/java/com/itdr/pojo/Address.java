@@ -8,6 +8,18 @@ public class Address {
     private String receive_city;
     private String receive_address;
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "address_id=" + address_id +
+                ", user_id=" + user_id +
+                ", receive_name='" + receive_name + '\'' +
+                ", receive_province='" + receive_province + '\'' +
+                ", receive_city='" + receive_city + '\'' +
+                ", receive_address='" + receive_address + '\'' +
+                '}';
+    }
+
     public void setAddress_id(int address_id) {
         this.address_id = address_id;
     }

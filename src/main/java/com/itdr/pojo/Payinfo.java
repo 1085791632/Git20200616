@@ -6,6 +6,16 @@ public class Payinfo {
     private int user_id;
     private String pay_stat;
 
+    @Override
+    public String toString() {
+        return "Payinfo{" +
+                "payinfo_id=" + payinfo_id +
+                ", order_id=" + order_id +
+                ", user_id=" + user_id +
+                ", pay_stat='" + pay_stat + '\'' +
+                '}';
+    }
+
     public int getPayinfo_id() {
         return payinfo_id;
     }

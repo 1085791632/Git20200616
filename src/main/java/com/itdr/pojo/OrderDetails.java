@@ -7,6 +7,17 @@ public class OrderDetails {
     private int order_id;
     private int quantity;
 
+    @Override
+    public String toString() {
+        return "OrderDetails{" +
+                "orderdetails_id=" + orderdetails_id +
+                ", goods_id=" + goods_id +
+                ", user_id=" + user_id +
+                ", order_id=" + order_id +
+                ", quantity=" + quantity +
+                '}';
+    }
+
     public int getOrderdetails_id() {
         return orderdetails_id;
     }

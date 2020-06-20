@@ -7,6 +7,17 @@ public class Cart {
     private int goods_quantity;
     private boolean checked;
 
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "cart_id=" + cart_id +
+                ", goods_id=" + goods_id +
+                ", user_id=" + user_id +
+                ", goods_quantity=" + goods_quantity +
+                ", checked=" + checked +
+                '}';
+    }
+
     public int getCart_id() {
         return cart_id;
     }

@@ -1,18 +1,35 @@
 package com.itdr.pojo;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class Order {
     private int order_id;
     private int user_id;
     private int cart_id;
-    private float payment;
+    private BigDecimal payment;
     private String payment_type;
-    private float postage;
+    private BigDecimal postage;
     private Date payment_time;
     private Date sent_time;
     private Date end_time;
     private Date close_time;
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "order_id=" + order_id +
+                ", user_id=" + user_id +
+                ", cart_id=" + cart_id +
+                ", payment=" + payment +
+                ", payment_type='" + payment_type + '\'' +
+                ", postage=" + postage +
+                ", payment_time=" + payment_time +
+                ", sent_time=" + sent_time +
+                ", end_time=" + end_time +
+                ", close_time=" + close_time +
+                '}';
+    }
 
     public int getOrder_id() {
         return order_id;
@@ -38,11 +55,11 @@ public class Order {
         this.cart_id = cart_id;
     }
 
-    public float getPayment() {
+    public BigDecimal getPayment() {
         return payment;
     }
 
-    public void setPayment(float payment) {
+    public void setPayment(BigDecimal payment) {
         this.payment = payment;
     }
 
@@ -54,11 +71,11 @@ public class Order {
         this.payment_type = payment_type;
     }
 
-    public float getPostage() {
+    public BigDecimal getPostage() {
         return postage;
     }
 
-    public void setPostage(float postage) {
+    public void setPostage(BigDecimal postage) {
         this.postage = postage;
     }
 

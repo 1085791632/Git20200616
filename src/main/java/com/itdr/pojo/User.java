@@ -4,8 +4,19 @@ public class User {
     private int user_id;
     private String username;
     private String password;
-    private char[] phone;
+    private String phone;
     private int role;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "user_id=" + user_id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", role=" + role +
+                '}';
+    }
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
@@ -19,7 +30,7 @@ public class User {
         this.password = password;
     }
 
-    public void setPhone(char[] phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -39,7 +50,7 @@ public class User {
         return password;
     }
 
-    public char[] getPhone() {
+    public String getPhone() {
         return phone;
     }
 

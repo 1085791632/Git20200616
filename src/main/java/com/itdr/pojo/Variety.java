@@ -5,6 +5,15 @@ public class Variety {
     private int parent_id;
     private String name;
 
+    @Override
+    public String toString() {
+        return "Variety{" +
+                "variety_id=" + variety_id +
+                ", parent_id=" + parent_id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public int getVariety_id() {
         return variety_id;
     }

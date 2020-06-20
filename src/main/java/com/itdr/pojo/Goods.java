@@ -1,5 +1,7 @@
 package com.itdr.pojo;
 
+import java.math.BigDecimal;
+
 public class Goods {
     private int goods_id;
     private int variety_id;
@@ -7,8 +9,22 @@ public class Goods {
     private String main_img;
     private String detail_img;
     private String detail;
-    private float price;
+    private BigDecimal price;
     private int stock;
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "goods_id=" + goods_id +
+                ", variety_id=" + variety_id +
+                ", name='" + name + '\'' +
+                ", main_img='" + main_img + '\'' +
+                ", detail_img='" + detail_img + '\'' +
+                ", detail='" + detail + '\'' +
+                ", price=" + price +
+                ", stock=" + stock +
+                '}';
+    }
 
     public int getGoods_id() {
         return goods_id;
@@ -58,11 +74,11 @@ public class Goods {
         this.detail = detail;
     }
 
-    public float getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
